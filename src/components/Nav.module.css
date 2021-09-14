@@ -1,0 +1,13 @@
+.nav {
+    grid-area: my-nav;
+    background-color: forestgreen;
+}
+
+.item {
+    color: whitesmoke;
+}
+
+.item.active {
+    color: black;
+    text-decoration: underline;
+}

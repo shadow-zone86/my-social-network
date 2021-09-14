@@ -45,22 +45,3 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
-
-.app-header {
-  grid-area: my-header;
-  background-color: forestgreen;
-}
-
-.app-header img {
-  width: 80px;
-}
-
-.app-nav {
-  grid-area: my-nav;
-  background-color: palegreen;
-}
-
-.app-content {
-  grid-area: my-content;
-  background-color: teal;
-}
