@@ -1,13 +1,15 @@
 .nav {
     grid-area: my-nav;
     background-color: forestgreen;
+    padding: 20px;
 }
 
-.item {
+.item a {
     color: whitesmoke;
+    text-decoration: none;
 }
 
-.item.active {
+.item a.active {
     color: black;
     text-decoration: underline;
 }
