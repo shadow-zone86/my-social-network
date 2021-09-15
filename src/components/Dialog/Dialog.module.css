@@ -7,8 +7,9 @@
     padding: 10px;
 }
 
-.users .active {
-    color: maroon;
+.users a {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .messages {

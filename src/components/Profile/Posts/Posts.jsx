@@ -4,11 +4,15 @@ import classes from './Posts.module.css'
 
 const Posts = () => {
     return (
-        <div>
-            my post
+        <div className={classes.description}>
+            <h3>My post</h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                </div>
             </div>
             <div className={classes.posts}>
                 <Post message="Hello world!" image="https://im0-tub-ru.yandex.net/i?id=7abd6330d0e762b7004822896c8ab501&n=13&exp=1" like="15" />
