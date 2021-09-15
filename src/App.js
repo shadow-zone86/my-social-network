@@ -1,19 +1,28 @@
 import './App.css'
 import Dialog from './components/Dialog/Dialog'
 import Header from './components/Header/Header'
+import Music from './components/Music/Music'
 import Navbar from './components/Navbar/Nav'
-//import Profile from './components/Profile/Profile'
+import News from './components/News/News'
+import Profile from './components/Profile/Profile'
+import Setting from './components/Setting/Setting'
+import {BrowserRouter, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Navbar />
-      {/*<Profile />*/}
-      <div className="app-wrapper-content">
-        <Dialog />
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Navbar />
+        <div className="app-wrapper-content">
+          <Route path='/profile' component={Profile} />
+          <Route path='/dialog' component={Dialog} />
+          <Route path='/news' component={News} />
+          <Route path='/music' component={Music} />
+          <Route path='/setting' component={Setting} />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
     /*
     <div className="App">
       <header className="App-header">
