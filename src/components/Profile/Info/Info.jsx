@@ -5,7 +5,7 @@ const Info = () => {
     return (
         <div>
             <div>
-                <img src="https://im0-tub-ru.yandex.net/i?id=0e1b789955094b4a2b3508762bd2e20c&ref=rim&n=33&w=291&h=164" alt="banner" />
+                <img src="https://t.eu1.jwwb.nl/W200065/eAyw227Zya2vAanKmuddoVUp0IM=/full-fit-in/1920x1920/filters:no_upscale()/f.eu1.jwwb.nl/public/d/6/4/wwwjelle/porsche_banner.jpg" alt="banner" />
             </div>
             <div className={classes.description}>
                 avatar + description
