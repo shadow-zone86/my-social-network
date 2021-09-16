@@ -17,20 +17,26 @@ let dataMessage = [
     { id: 3, message: 'Vue.js' }
 ]
 
+let users = dataUser.map((user) => {
+    return (
+        <Users name={user.name} id={user.id} />
+    )
+})
+
+let messages = dataMessage.map((message) => {
+    return (
+        <Message message={message.message} />
+    )
+})
+
 const Dialog = () => {
     return (
         <div className={classes.dialogs}>
             <div className={classes.users}>
-                <Users name={dataUser[0].name} id={dataUser[0].id} />
-                <Users name={dataUser[1].name} id={dataUser[1].id} />
-                <Users name={dataUser[2].name} id={dataUser[2].id} />
-                <Users name={dataUser[3].name} id={dataUser[3].id} />
-                <Users name={dataUser[4].name} id={dataUser[4].id} />
+                { users }
             </div>
             <div className={classes.messages}>
-                <Message message={dataMessage[0].message} />
-                <Message message={dataMessage[1].message} />
-                <Message message={dataMessage[2].message} />
+                { messages }
             </div>
         </div>
     )
