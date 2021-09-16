@@ -8,18 +8,18 @@ import Profile from './components/Profile/Profile'
 import Setting from './components/Setting/Setting'
 import {BrowserRouter, Route} from 'react-router-dom'
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          <Route path='/profile' component={Profile} />
-          <Route path='/dialog' component={Dialog} />
-          <Route path='/news' component={News} />
-          <Route path='/music' component={Music} />
-          <Route path='/setting' component={Setting} />
+          <Route path='/profile' render={ () => <Profile dataPost={ props.dataPost } /> } />
+          <Route path='/dialog' render={ () => <Dialog dataUser={ props.dataUser } dataMessage={ props.dataMessage } /> } />
+          <Route path='/news' component={ News } />
+          <Route path='/music' component={ Music } />
+          <Route path='/setting' component={ Setting } />
         </div>
       </div>
     </BrowserRouter>
