@@ -15,8 +15,8 @@ function App(props) {
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          <Route path='/profile' render={ () => <Profile dataPost={ props.dataPost } /> } />
-          <Route path='/dialog' render={ () => <Dialog dataUser={ props.dataUser } dataMessage={ props.dataMessage } /> } />
+          <Route path='/profile' render={ () => <Profile dataPost={ props.state.profilePage.dataPost } /> } />
+          <Route path='/dialog' render={ () => <Dialog dataUser={ props.state.messagePage.dataUser } dataMessage={ props.state.messagePage.dataMessage } /> } />
           <Route path='/news' component={ News } />
           <Route path='/music' component={ Music } />
           <Route path='/setting' component={ Setting } />
