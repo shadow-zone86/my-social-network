@@ -4,8 +4,8 @@ import music from '../../nautilus-pompilius.mp3'
 
 const Music = () => {
     return (
-        <div className={classes.item}>
-            <audio src={music} controls></audio>
+        <div className={ classes.item }>
+            <audio src={ music } controls></audio>
         </div>
     )
 }

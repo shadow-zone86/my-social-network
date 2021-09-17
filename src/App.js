@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Nav'
 import News from './components/News/News'
 import Profile from './components/Profile/Profile'
 import Setting from './components/Setting/Setting'
-import {BrowserRouter, Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 function App(props) {
   return (

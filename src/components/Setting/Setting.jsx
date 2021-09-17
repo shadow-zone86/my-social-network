@@ -3,7 +3,7 @@ import classes from './Setting.module.css'
 
 const Setting = () => {
     return (
-        <div className={classes.item}>
+        <div className={ classes.item }>
             Setting
         </div>
     )
