@@ -8,6 +8,7 @@ let state = {
             { id: 3, message: "Show must go on", image: "https://im0-tub-ru.yandex.net/i?id=4665761d0e170bec4bc26d3d37d09b34&n=13&exp=1", like: 88, alt: "icon" },
             { id: 4, message: "Whenever", image: "https://im0-tub-ru.yandex.net/i?id=29d9d1e851b7371776fdef36cdcc3c20&n=13&exp=1", like: 27, alt: "icon" }
         ],
+        newPostText: 'Dachshund'
     },
     messagePage: {
         dataUser: [
@@ -25,15 +26,21 @@ let state = {
     }
 }
 
-export let addPost = (post) => {
+export let addPost = () => {
     let newPost = {
         id: 5,
-        message: post,
+        message: state.profilePage.newPostText,
         image: "https://im0-tub-ru.yandex.net/i?id=a010265297fb86a07acde926f77ebc4c&n=13&exp=1",
         like: 0, 
         alt: "icon"
     }
     state.profilePage.dataPost.push(newPost)
+    state.profilePage.newPostText = ''
+    renderTree(state)
+}
+
+export let updatePost = (newPost) => {
+    state.profilePage.newPostText = newPost
     renderTree(state)
 }
 
