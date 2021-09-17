@@ -1,3 +1,5 @@
+import { renderTree } from '../render'
+
 let state = {
     profilePage: {
         dataPost: [
@@ -21,6 +23,18 @@ let state = {
             { id: 3, message: 'Vue.js' }
         ]
     }
+}
+
+export let addPost = (post) => {
+    let newPost = {
+        id: 5,
+        message: post,
+        image: "https://im0-tub-ru.yandex.net/i?id=a010265297fb86a07acde926f77ebc4c&n=13&exp=1",
+        like: 0, 
+        alt: "icon"
+    }
+    state.profilePage.dataPost.push(newPost)
+    renderTree(state)
 }
 
 export default state
