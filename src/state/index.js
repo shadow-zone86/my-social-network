@@ -22,7 +22,8 @@ let state = {
             { id: 1, message: 'Angular.js' },
             { id: 2, message: 'React.js' },
             { id: 3, message: 'Vue.js' }
-        ]
+        ],
+        newMessageText: 'Dachshund'
     }
 }
 
@@ -41,6 +42,21 @@ export let addPost = () => {
 
 export let updatePost = (newPost) => {
     state.profilePage.newPostText = newPost
+    renderTree(state)
+}
+
+export let addMessage = () => {
+    let newMessage = {
+        id: 4,
+        message: state.messagePage.newMessageText
+    }
+    state.messagePage.dataMessage.push(newMessage)
+    state.messagePage.newMessageText = ''
+    renderTree(state)
+}
+
+export let updateMessage = (newMessage) => {
+    state.messagePage.newMessageText = newMessage
     renderTree(state)
 }
 
